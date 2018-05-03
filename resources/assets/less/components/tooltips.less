@@ -1,0 +1,79 @@
+.tooltip {
+  @apply .block .text-xs .z-50;
+
+  .tooltip-inner {
+    @apply .bg-grey-darkest .px-3 .py-2 .rounded .text-white;
+  }
+
+  .tooltip-arrow {
+    @apply .absolute .border-grey-darkest .border-solid .h-0 .m-2 .w-0 .z-40;
+  }
+
+  &[x-placement^="top"] {
+    @apply .mr-2;
+
+    .tooltip-arrow {
+      @apply .mb-0 .mt-0;
+      border-width: 0.25rem 0.25rem 0 0.25rem;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      bottom: -0.25rem;
+      left: calc(50% - 0.25rem);
+    }
+  }
+
+  &[x-placement^="bottom"] {
+    @apply .mt-2;
+
+    .tooltip-arrow {
+      @apply .mb-0 .mt-0;
+      border-width: 0 0.25rem 0.25rem 0.25rem;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-top-color: transparent !important;
+      top: -0.25rem;
+      left: calc(50% - 0.25rem);
+    }
+  }
+
+  &[x-placement^="right"] {
+    @apply .ml-2;
+
+    .tooltip-arrow {
+      @apply .ml-0 .mr-0;
+      border-width: 0.25rem 0.25rem 0.25rem 0;
+      border-left-color: transparent !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+      left: -0.25rem;
+      top: calc(50% - 0.25rem);
+    }
+  }
+
+  &[x-placement^="left"] {
+    @apply .mr-2;
+
+    .tooltip-arrow {
+      @apply .ml-0 .mr-0;
+      border-width: 0.25rem 0 0.25rem 0.25rem;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      right: -0.25rem;
+      top: calc(50% - 0.25rem);
+    }
+  }
+
+  &[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s, visibility 0.25s;
+  }
+
+  &[aria-hidden='false'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.25s;
+  }
+}
