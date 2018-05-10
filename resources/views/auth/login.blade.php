@@ -19,7 +19,7 @@
                     placeholder="Username">
 
                 @if ($errors->has('username'))
-                    <div class="flex items-center justify-center px-4 text-secondary text-xs font-bold absolute pin-r pin-t leading-none cursor-pointer h-12" v-tooltip.right="'{{ $errors->first('username') }}'">
+                    <div class="flex items-center justify-center px-4 text-red text-xs font-bold absolute pin-r pin-t leading-none cursor-pointer h-12" v-tooltip.right="'{{ $errors->first('username') }}'">
                         <span>!</span>
                     </div>
                 @endif
@@ -35,7 +35,7 @@
                     placeholder="Password">
 
                 @if ($errors->has('password'))
-                    <div class="flex items-center justify-center px-4 text-secondary text-xs font-bold absolute pin-r pin-t leading-none cursor-pointer h-12" v-tooltip.right="'{{ $errors->first('password') }}'">
+                    <div class="flex items-center justify-center px-4 text-red text-xs font-bold absolute pin-r pin-t leading-none cursor-pointer h-12" v-tooltip.right="'{{ $errors->first('password') }}'">
                         <span>!</span>
                     </div>
                 @endif

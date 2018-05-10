@@ -50,11 +50,19 @@
         {{-- Manifest --}}
         <link rel="manifest" href="/manifest.json">
     </head>
-    <body>
-        <div id="root">
-            @include('components.header')
+    <body class="h-screen font-sans text-black">
+        <div id="root" class="flex flex-col h-full">
+            @include('components.header', ['pageTitle' => 'Dashboard'])
 
-            @yield('content')
+            <div class="flex flex-1">
+                <div class="flex-1 h-full overflow-auto p-4">
+                    @yield('content')
+                </div>
+
+                @include('dashboard.sidebar')
+
+                @include('flash::message')
+            </div>
         </div>
 
         <script src="{{ mix('js/app.js') }}"></script>

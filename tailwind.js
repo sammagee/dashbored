@@ -626,6 +626,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
   },
 
 
@@ -787,7 +788,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover'],
+    backgroundColors: ['responsive', 'hover', 'focus'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
@@ -820,7 +821,7 @@ module.exports = {
     svgFill: [],
     svgStroke: [],
     textAlign: ['responsive'],
-    textColors: ['responsive', 'hover'],
+    textColors: ['responsive', 'hover', 'focus'],
     textSizes: ['responsive'],
     textStyle: ['responsive', 'hover'],
     tracking: ['responsive'],

@@ -14,16 +14,17 @@ html {
     -webkit-font-smoothing: antialiased !important;
 }
 
-body {
-    @apply .bg-white .font-sans;
+[v-cloak] {
+    @apply .hidden;
 }
 
 ::selection {
-    @apply .bg-purple .text-white;
+    @apply .bg-black .text-white;
 }
 
 @import 'components/buttons';
 @import 'components/tooltips';
+@import 'components/transitions';
 
 @tailwind utilities;
 
@@ -31,4 +32,5 @@ body {
  * Utilities
  */
 @import 'utilities/outlines';
+@import 'utilities/text-colors';
 @import 'utilities/transitions';

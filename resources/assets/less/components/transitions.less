@@ -1,0 +1,51 @@
+/**
+ * Fade in/out
+ */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .3s;
+}
+
+.fade-enter, .fade-leave-to {
+    @apply .opacity-0;
+}
+
+/**
+ * Slide down on enter, slide up on exit.
+ */
+.slide-down-enter-active,
+.slide-down-leave-active {
+    @apply .transition-all;
+}
+
+.slide-down-enter,
+.slide-down-leave-to {
+    transform: translate(0, -100%);
+    opacity: 0;
+}
+
+/**
+ * Slide left on enter, slide right on exit.
+ */
+.slide-left-enter-active,
+.slide-left-leave-active {
+    @apply .transition-all;
+}
+
+.slide-left-enter {
+    transform: translate(100%, 0);
+    opacity: 0;
+}
+
+/**
+ * Slide up on enter, slide down on exit.
+ */
+.slide-up-enter-active,
+.slide-up-leave-active {
+    @apply .transition-all;
+}
+
+.slide-up-enter,
+.slide-up-leave-to {
+    transform: translate(0, 100%);
+    opacity: 0;
+}

@@ -50,13 +50,21 @@
         {{-- Manifest --}}
         <link rel="manifest" href="/manifest.json">
     </head>
-    <body class="bg-grey-lightest font-sans text-black">
-        <div id="root" class="flex h-screen items-center justify-center" v-cloak>
-            <div class="w-64">
-                @yield('form')
-            </div>
+    <body class="h-screen font-sans text-black">
+        <div id="root" class="flex flex-col h-full">
+            @include('components.header', ['pageTitle' => 'Settings'])
 
-            @include('flash::message')
+            <div class="flex flex-1">
+                <div class="flex flex-1 h-full justify-center overflow-auto p-4 ml-16">
+                    <div class="w-64">
+                        @yield('form')
+                    </div>
+                </div>
+
+                @include('settings.sidebar')
+
+                @include('flash::message')
+            </div>
         </div>
 
         <script src="{{ mix('js/app.js') }}"></script>
