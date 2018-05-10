@@ -18968,9 +18968,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     };
 
     document.addEventListener("click", listener);
+    document.addEventListener("touchstart", listener);
 
     this.$once("hook:destroyed", function () {
       document.removeEventListener("click", listener);
+      document.removeEventListener("touchstart", listener);
     });
   },
   render: function render() {

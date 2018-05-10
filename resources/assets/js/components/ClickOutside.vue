@@ -12,9 +12,11 @@
       }
 
       document.addEventListener("click", listener)
+      document.addEventListener("touchstart", listener)
 
       this.$once("hook:destroyed", () => {
         document.removeEventListener("click", listener)
+        document.removeEventListener("touchstart", listener)
       })
     },
 
