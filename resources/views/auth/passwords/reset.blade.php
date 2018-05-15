@@ -1,65 +1,69 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+@section('Reset Password')
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('password.request') }}">
-                        @csrf
+@section('form')
+    <form method="POST" action="{{ route('password.request') }}">
+        <div class="bg-white mb-4 overflow-hidden rounded shadow">
+            @csrf
 
-                        <input type="hidden" name="token" value="{{ $token }}">
+            <input type="hidden" name="token" value="{{ $token }}">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+            <div>
+                <input
+                    id="email"
+                    type="email"
+                    class="h-12 px-4 text-grey-darker border-b border-grey-lighter w-full{{ $errors->has('email') ? ' pr-12' : '' }}"
+                    name="email"
+                    value="{{ $email ?? old('email') }}"
+                    required
+                    autofocus
+                    placeholder="Email">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
+                @if ($errors->has('email'))
+                    <div class="flex items-center justify-center px-4 text-red text-xs font-bold absolute pin-r pin-t leading-none cursor-pointer h-12" v-tooltip.right="'{{ $errors->first('email') }}'">
+                        <span>!</span>
+                    </div>
+                @endif
+            </div>
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+            <div>
+                <input
+                    id="password"
+                    type="password"
+                    class="h-12 px-4 text-grey-darker border-b border-grey-lighter w-full{{ $errors->has('password') ? ' pr-12' : '' }}"
+                    name="password"
+                    required
+                    placeholder="Password">
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                @if ($errors->has('password'))
+                    <div class="flex items-center justify-center px-4 text-red text-xs font-bold absolute pin-r pin-t leading-none cursor-pointer h-12" v-tooltip.right="'{{ $errors->first('password') }}'">
+                        <span>!</span>
+                    </div>
+                @endif
+            </div>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+            <div>
+                <input
+                    id="password_confirmation"
+                    type="password"
+                    class="h-12 px-4 text-grey-darker border-b border-grey-lighter w-full{{ $errors->has('password_confirmation') ? ' pr-12' : '' }}"
+                    name="password_confirmation"
+                    required
+                    placeholder="Confirm Password">
 
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Reset Password') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                @if ($errors->has('password_confirmation'))
+                    <div class="flex items-center justify-center px-4 text-red text-xs font-bold absolute pin-r pin-t leading-none cursor-pointer h-12" v-tooltip.right="'{{ $errors->first('password_confirmation') }}'">
+                        <span>!</span>
+                    </div>
+                @endif
             </div>
         </div>
-    </div>
-</div>
+
+        <div>
+            <button type="submit" class="button w-full">
+                Reset Password
+            </button>
+        </div>
+    </form>
 @endsection

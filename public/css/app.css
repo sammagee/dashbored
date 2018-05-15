@@ -649,8 +649,15 @@ button,
 }
 
 html {
+  height: 100%;
+  overflow: hidden;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
 }
 
 [v-cloak] {
@@ -3628,6 +3635,102 @@ button:focus {
 }
 
 .focus\:text-red-lightest:focus {
+  color: #fcebea;
+}
+
+.active\:text-transparent:active {
+  color: transparent;
+}
+
+.active\:text-black:active {
+  color: #22292f;
+}
+
+.active\:text-grey-darkest:active {
+  color: #3d4852;
+}
+
+.active\:text-grey-darker:active {
+  color: #606f7b;
+}
+
+.active\:text-grey-dark:active {
+  color: #8795a1;
+}
+
+.active\:text-grey:active {
+  color: #b8c2cc;
+}
+
+.active\:text-grey-light:active {
+  color: #dae1e7;
+}
+
+.active\:text-grey-lighter:active {
+  color: #f1f5f8;
+}
+
+.active\:text-grey-lightest:active {
+  color: #f8fafc;
+}
+
+.active\:text-white:active {
+  color: #fff;
+}
+
+.active\:text-purple-darkest:active {
+  color: #21183c;
+}
+
+.active\:text-purple-darker:active {
+  color: #382b5f;
+}
+
+.active\:text-purple-dark:active {
+  color: #794acf;
+}
+
+.active\:text-purple:active {
+  color: #9561e2;
+}
+
+.active\:text-purple-light:active {
+  color: #a779e9;
+}
+
+.active\:text-purple-lighter:active {
+  color: #d6bbfc;
+}
+
+.active\:text-purple-lightest:active {
+  color: #f3ebff;
+}
+
+.active\:text-red-darkest:active {
+  color: #3b0d0c;
+}
+
+.active\:text-red-darker:active {
+  color: #621b18;
+}
+
+.active\:text-red-dark:active {
+  color: #cc1f1a;
+}
+
+.active\:text-red:active {
+  color: #e3342f;
+}
+
+.active\:text-red-light:active {
+  color: #ef5753;
+}
+
+.active\:text-red-lighter:active {
+  color: #f9acaa;
+}
+
+.active\:text-red-lightest:active {
   color: #fcebea;
 }
 
@@ -6734,6 +6837,102 @@ button:focus {
     color: #fcebea;
   }
 
+  .sm\:active\:text-transparent:active {
+    color: transparent;
+  }
+
+  .sm\:active\:text-black:active {
+    color: #22292f;
+  }
+
+  .sm\:active\:text-grey-darkest:active {
+    color: #3d4852;
+  }
+
+  .sm\:active\:text-grey-darker:active {
+    color: #606f7b;
+  }
+
+  .sm\:active\:text-grey-dark:active {
+    color: #8795a1;
+  }
+
+  .sm\:active\:text-grey:active {
+    color: #b8c2cc;
+  }
+
+  .sm\:active\:text-grey-light:active {
+    color: #dae1e7;
+  }
+
+  .sm\:active\:text-grey-lighter:active {
+    color: #f1f5f8;
+  }
+
+  .sm\:active\:text-grey-lightest:active {
+    color: #f8fafc;
+  }
+
+  .sm\:active\:text-white:active {
+    color: #fff;
+  }
+
+  .sm\:active\:text-purple-darkest:active {
+    color: #21183c;
+  }
+
+  .sm\:active\:text-purple-darker:active {
+    color: #382b5f;
+  }
+
+  .sm\:active\:text-purple-dark:active {
+    color: #794acf;
+  }
+
+  .sm\:active\:text-purple:active {
+    color: #9561e2;
+  }
+
+  .sm\:active\:text-purple-light:active {
+    color: #a779e9;
+  }
+
+  .sm\:active\:text-purple-lighter:active {
+    color: #d6bbfc;
+  }
+
+  .sm\:active\:text-purple-lightest:active {
+    color: #f3ebff;
+  }
+
+  .sm\:active\:text-red-darkest:active {
+    color: #3b0d0c;
+  }
+
+  .sm\:active\:text-red-darker:active {
+    color: #621b18;
+  }
+
+  .sm\:active\:text-red-dark:active {
+    color: #cc1f1a;
+  }
+
+  .sm\:active\:text-red:active {
+    color: #e3342f;
+  }
+
+  .sm\:active\:text-red-light:active {
+    color: #ef5753;
+  }
+
+  .sm\:active\:text-red-lighter:active {
+    color: #f9acaa;
+  }
+
+  .sm\:active\:text-red-lightest:active {
+    color: #fcebea;
+  }
+
   .sm\:text-xs {
     font-size: .75rem;
   }
@@ -9818,6 +10017,102 @@ button:focus {
   }
 
   .md\:focus\:text-red-lightest:focus {
+    color: #fcebea;
+  }
+
+  .md\:active\:text-transparent:active {
+    color: transparent;
+  }
+
+  .md\:active\:text-black:active {
+    color: #22292f;
+  }
+
+  .md\:active\:text-grey-darkest:active {
+    color: #3d4852;
+  }
+
+  .md\:active\:text-grey-darker:active {
+    color: #606f7b;
+  }
+
+  .md\:active\:text-grey-dark:active {
+    color: #8795a1;
+  }
+
+  .md\:active\:text-grey:active {
+    color: #b8c2cc;
+  }
+
+  .md\:active\:text-grey-light:active {
+    color: #dae1e7;
+  }
+
+  .md\:active\:text-grey-lighter:active {
+    color: #f1f5f8;
+  }
+
+  .md\:active\:text-grey-lightest:active {
+    color: #f8fafc;
+  }
+
+  .md\:active\:text-white:active {
+    color: #fff;
+  }
+
+  .md\:active\:text-purple-darkest:active {
+    color: #21183c;
+  }
+
+  .md\:active\:text-purple-darker:active {
+    color: #382b5f;
+  }
+
+  .md\:active\:text-purple-dark:active {
+    color: #794acf;
+  }
+
+  .md\:active\:text-purple:active {
+    color: #9561e2;
+  }
+
+  .md\:active\:text-purple-light:active {
+    color: #a779e9;
+  }
+
+  .md\:active\:text-purple-lighter:active {
+    color: #d6bbfc;
+  }
+
+  .md\:active\:text-purple-lightest:active {
+    color: #f3ebff;
+  }
+
+  .md\:active\:text-red-darkest:active {
+    color: #3b0d0c;
+  }
+
+  .md\:active\:text-red-darker:active {
+    color: #621b18;
+  }
+
+  .md\:active\:text-red-dark:active {
+    color: #cc1f1a;
+  }
+
+  .md\:active\:text-red:active {
+    color: #e3342f;
+  }
+
+  .md\:active\:text-red-light:active {
+    color: #ef5753;
+  }
+
+  .md\:active\:text-red-lighter:active {
+    color: #f9acaa;
+  }
+
+  .md\:active\:text-red-lightest:active {
     color: #fcebea;
   }
 
@@ -12908,6 +13203,102 @@ button:focus {
     color: #fcebea;
   }
 
+  .lg\:active\:text-transparent:active {
+    color: transparent;
+  }
+
+  .lg\:active\:text-black:active {
+    color: #22292f;
+  }
+
+  .lg\:active\:text-grey-darkest:active {
+    color: #3d4852;
+  }
+
+  .lg\:active\:text-grey-darker:active {
+    color: #606f7b;
+  }
+
+  .lg\:active\:text-grey-dark:active {
+    color: #8795a1;
+  }
+
+  .lg\:active\:text-grey:active {
+    color: #b8c2cc;
+  }
+
+  .lg\:active\:text-grey-light:active {
+    color: #dae1e7;
+  }
+
+  .lg\:active\:text-grey-lighter:active {
+    color: #f1f5f8;
+  }
+
+  .lg\:active\:text-grey-lightest:active {
+    color: #f8fafc;
+  }
+
+  .lg\:active\:text-white:active {
+    color: #fff;
+  }
+
+  .lg\:active\:text-purple-darkest:active {
+    color: #21183c;
+  }
+
+  .lg\:active\:text-purple-darker:active {
+    color: #382b5f;
+  }
+
+  .lg\:active\:text-purple-dark:active {
+    color: #794acf;
+  }
+
+  .lg\:active\:text-purple:active {
+    color: #9561e2;
+  }
+
+  .lg\:active\:text-purple-light:active {
+    color: #a779e9;
+  }
+
+  .lg\:active\:text-purple-lighter:active {
+    color: #d6bbfc;
+  }
+
+  .lg\:active\:text-purple-lightest:active {
+    color: #f3ebff;
+  }
+
+  .lg\:active\:text-red-darkest:active {
+    color: #3b0d0c;
+  }
+
+  .lg\:active\:text-red-darker:active {
+    color: #621b18;
+  }
+
+  .lg\:active\:text-red-dark:active {
+    color: #cc1f1a;
+  }
+
+  .lg\:active\:text-red:active {
+    color: #e3342f;
+  }
+
+  .lg\:active\:text-red-light:active {
+    color: #ef5753;
+  }
+
+  .lg\:active\:text-red-lighter:active {
+    color: #f9acaa;
+  }
+
+  .lg\:active\:text-red-lightest:active {
+    color: #fcebea;
+  }
+
   .lg\:text-xs {
     font-size: .75rem;
   }
@@ -15992,6 +16383,102 @@ button:focus {
   }
 
   .xl\:focus\:text-red-lightest:focus {
+    color: #fcebea;
+  }
+
+  .xl\:active\:text-transparent:active {
+    color: transparent;
+  }
+
+  .xl\:active\:text-black:active {
+    color: #22292f;
+  }
+
+  .xl\:active\:text-grey-darkest:active {
+    color: #3d4852;
+  }
+
+  .xl\:active\:text-grey-darker:active {
+    color: #606f7b;
+  }
+
+  .xl\:active\:text-grey-dark:active {
+    color: #8795a1;
+  }
+
+  .xl\:active\:text-grey:active {
+    color: #b8c2cc;
+  }
+
+  .xl\:active\:text-grey-light:active {
+    color: #dae1e7;
+  }
+
+  .xl\:active\:text-grey-lighter:active {
+    color: #f1f5f8;
+  }
+
+  .xl\:active\:text-grey-lightest:active {
+    color: #f8fafc;
+  }
+
+  .xl\:active\:text-white:active {
+    color: #fff;
+  }
+
+  .xl\:active\:text-purple-darkest:active {
+    color: #21183c;
+  }
+
+  .xl\:active\:text-purple-darker:active {
+    color: #382b5f;
+  }
+
+  .xl\:active\:text-purple-dark:active {
+    color: #794acf;
+  }
+
+  .xl\:active\:text-purple:active {
+    color: #9561e2;
+  }
+
+  .xl\:active\:text-purple-light:active {
+    color: #a779e9;
+  }
+
+  .xl\:active\:text-purple-lighter:active {
+    color: #d6bbfc;
+  }
+
+  .xl\:active\:text-purple-lightest:active {
+    color: #f3ebff;
+  }
+
+  .xl\:active\:text-red-darkest:active {
+    color: #3b0d0c;
+  }
+
+  .xl\:active\:text-red-darker:active {
+    color: #621b18;
+  }
+
+  .xl\:active\:text-red-dark:active {
+    color: #cc1f1a;
+  }
+
+  .xl\:active\:text-red:active {
+    color: #e3342f;
+  }
+
+  .xl\:active\:text-red-light:active {
+    color: #ef5753;
+  }
+
+  .xl\:active\:text-red-lighter:active {
+    color: #f9acaa;
+  }
+
+  .xl\:active\:text-red-lightest:active {
     color: #fcebea;
   }
 

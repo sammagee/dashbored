@@ -37443,7 +37443,7 @@ var render = function() {
             }
           ],
           staticClass:
-            "bg-black fixed flex mb-6 ml-6 pin-b pin-l rounded shadow z-50",
+            "bg-black fixed flex mb-4 ml-4 pin-b pin-l rounded shadow z-50",
           attrs: { role: "alert" }
         },
         [

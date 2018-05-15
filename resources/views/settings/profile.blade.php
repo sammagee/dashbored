@@ -3,7 +3,7 @@
 @section('title', 'Profile Settings')
 
 @section('form')
-    <h2 class="mb-4 text-base text-black">Profile</h2>
+    <h2 class="mb-2 text-xs text-black tracking-wide uppercase">Profile</h2>
 
     <form method="POST" action="{{ route('settings.profile') }}">
         <div class="bg-white mb-4 overflow-hidden rounded shadow">

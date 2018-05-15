@@ -50,7 +50,7 @@
         {{-- Manifest --}}
         <link rel="manifest" href="/manifest.json">
     </head>
-    <body class="h-screen font-sans text-black">
+    <body class="bg-grey-lightest h-screen font-sans text-black">
         <div id="root" class="flex flex-col h-full">
             @include('components.header', ['pageTitle' => 'Settings'])
 

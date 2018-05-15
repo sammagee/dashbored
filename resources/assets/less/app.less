@@ -10,8 +10,13 @@
 }
 
 html {
+    @apply .h-full .overflow-hidden;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+    @apply .h-full .overflow-auto;
 }
 
 [v-cloak] {

@@ -1,6 +1,6 @@
 <template>
   <transition name="slide-up" mode="out-in" appear>
-    <div class="bg-black fixed flex mb-6 ml-6 pin-b pin-l rounded shadow z-50" role="alert" v-show="show">
+    <div class="bg-black fixed flex mb-4 ml-4 pin-b pin-l rounded shadow z-50" role="alert" v-show="show">
       <div class="flex h12 items-center justify-between p-4 text-sm text-white">
         <div v-html="message"></div>
 

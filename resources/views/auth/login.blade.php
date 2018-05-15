@@ -42,10 +42,16 @@
             </div>
         </div>
 
-        <div class="form-group row mb-0">
+        <div class="mb-2">
             <button type="submit" class="button w-full">
                 Login
             </button>
+        </div>
+
+        <div class="text-center">
+            <a class="font-bold no-underline text-black text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-darkest transition-all" href="{{ route('password.request') }}">
+                Forgot your info?
+            </a>
         </div>
     </form>
 @endsection

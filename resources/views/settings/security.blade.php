@@ -3,7 +3,7 @@
 @section('title', 'Security Settings')
 
 @section('form')
-    <h2 class="mb-4 text-base text-black">Security</h2>
+    <h2 class="mb-2 text-xs text-black tracking-wide uppercase">Security</h2>
 
     <form method="POST" action="{{ route('settings.security') }}">
         <div class="bg-white mb-4 overflow-hidden rounded shadow">
