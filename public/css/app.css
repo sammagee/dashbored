@@ -634,6 +634,36 @@ button,
   cursor: pointer;
 }
 
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 /**
  * Components
  */
@@ -2085,7 +2115,7 @@ button:focus {
 }
 
 .font-mono {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Operator Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
 .font-hairline {
@@ -3770,6 +3800,10 @@ button:focus {
   font-size: 3rem;
 }
 
+.text-6xl {
+  font-size: 4.5rem;
+}
+
 .italic {
   font-style: italic;
 }
@@ -5292,7 +5326,7 @@ button:focus {
   }
 
   .sm\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Operator Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .sm\:font-hairline {
@@ -6969,6 +7003,10 @@ button:focus {
     font-size: 3rem;
   }
 
+  .sm\:text-6xl {
+    font-size: 4.5rem;
+  }
+
   .sm\:italic {
     font-style: italic;
   }
@@ -8475,7 +8513,7 @@ button:focus {
   }
 
   .md\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Operator Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .md\:font-hairline {
@@ -10152,6 +10190,10 @@ button:focus {
     font-size: 3rem;
   }
 
+  .md\:text-6xl {
+    font-size: 4.5rem;
+  }
+
   .md\:italic {
     font-style: italic;
   }
@@ -11658,7 +11700,7 @@ button:focus {
   }
 
   .lg\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Operator Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .lg\:font-hairline {
@@ -13335,6 +13377,10 @@ button:focus {
     font-size: 3rem;
   }
 
+  .lg\:text-6xl {
+    font-size: 4.5rem;
+  }
+
   .lg\:italic {
     font-style: italic;
   }
@@ -14841,7 +14887,7 @@ button:focus {
   }
 
   .xl\:font-mono {
-    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: Operator Mono, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .xl\:font-hairline {
@@ -16516,6 +16562,10 @@ button:focus {
 
   .xl\:text-5xl {
     font-size: 3rem;
+  }
+
+  .xl\:text-6xl {
+    font-size: 4.5rem;
   }
 
   .xl\:italic {

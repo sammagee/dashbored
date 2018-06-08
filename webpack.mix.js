@@ -1,5 +1,5 @@
 let mix = require('laravel-mix');
-let tailwindcss = require('tailwindcss');
+require('laravel-mix-tailwind');
 require('laravel-mix-purgecss');
 
 /*
@@ -16,12 +16,7 @@ require('laravel-mix-purgecss');
 mix
   .js('resources/assets/js/app.js', 'public/js')
   .less('resources/assets/less/app.less', 'public/css')
-  .options({
-    postCss: [
-      tailwindcss('./tailwind.js')
-    ],
-    processCssUrls: false
-  })
+  .tailwind()
   .purgeCss({
     whitelistPatterns: [/tooltip/],
   });
