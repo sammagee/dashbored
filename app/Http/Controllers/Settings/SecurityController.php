@@ -7,25 +7,20 @@ use App\Http\Controllers\Controller;
 
 class SecurityController extends Controller
 {
-    public function index()
-    {
-        return view('settings.security');
-    }
-
+    /**
+     * Update the user's password.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function update(Request $request)
     {
-        $user = $request->user();
-
         $this->validate($request, [
             'password' => 'required|confirmed|min:6',
         ]);
 
-        $user->update([
+        $request->user()->update([
             'password' => bcrypt($request->password),
         ]);
-
-        flash('Your security settings have been updated!');
-
-        return back();
     }
 }

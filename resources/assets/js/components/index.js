@@ -1,15 +1,18 @@
 import Vue from 'vue'
+import Button from './Button'
+import Child from './Child'
+import ClickOutside from './ClickOutside'
+import Clock from './Clock'
+import Flash from './Flash'
+import HasError from './form/HasError'
 
-import ClickOutside from '../components/ClickOutside'
-import Clock from '../components/Clock'
-import Dropdown from '../components/Dropdown'
-import Flash from '../components/Flash'
-import Logo from '../components/Logo'
-import SiteStatus from '../components/SiteStatus'
-
-Vue.component(ClickOutside.name, ClickOutside)
-Vue.component(Clock.name, Clock)
-Vue.component(Dropdown.name, Dropdown)
-Vue.component(Flash.name, Flash)
-Vue.component(Logo.name, Logo)
-Vue.component(SiteStatus.name, SiteStatus)
+[
+  Button,
+  Child,
+  ClickOutside,
+  Clock,
+  Flash,
+  HasError
+].forEach(Component => {
+  Vue.component(Component.name, Component)
+})

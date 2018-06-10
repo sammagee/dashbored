@@ -1,11 +1,15 @@
 import Vue from 'vue'
-import VToolTip from 'v-tooltip'
+import store from '~/store'
+import router from '~/router'
+import App from '~/components/App'
 
-import './components'
-import './pwa'
+import '~/bootstrap'
+import '~/plugins'
+import '~/components'
 
-Vue.use(VToolTip)
-
-const app = new Vue({
-  el: '#root'
+/* eslint-disable no-new */
+new Vue({
+  store,
+  router,
+  ...App
 })

@@ -1,9 +1,18 @@
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
 button:focus {
     outline: none !important;
 }
 
 .button {
-    @apply .bg-black .font-semibold .h-12 .inline-block .no-underline .px-4 .rounded .shadow .text-center .text-sm .text-white .tracking-md .transition-all .uppercase .whitespace-no-wrap;
+    @apply .bg-grey-darkest .font-semibold .h-12 .inline-block .no-underline .px-4 .rounded .shadow .text-center .text-sm .text-white .tracking-md .transition-all .uppercase .whitespace-no-wrap;
 
     &:focus, &:hover {
         @apply .bg-grey-darker .shadow-md;
@@ -14,8 +23,12 @@ button:focus {
     }
 }
 
+.button:disabled {
+    @apply .bg-grey-dark .cursor-not-allowed;
+}
+
 .button-icon {
-    @apply .bg-black .flex .h-10 .items-center .justify-center .no-underline .rounded-full .shadow .text-white .transition-all .w-10 .whitespace-no-wrap;
+    @apply .bg-grey-darkest .flex .h-10 .items-center .justify-center .no-underline .rounded-full .shadow .text-white .transition-all .w-10 .whitespace-no-wrap;
 
     &:focus, &:hover {
         @apply .bg-grey-darker .shadow-md;
@@ -23,5 +36,21 @@ button:focus {
 
     &:active {
         @apply .bg-grey-darkest .shadow;
+    }
+}
+
+.button.is-loading {
+    @apply .pointer-events-none;
+    color: transparent !important;
+
+    &::after {
+        @apply .absolute .block .border-2 .border-white .h-4 .rounded-full .w-4;
+        animation: spinAround 500ms infinite linear;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        content: "";
+        position: absolute !important;
+        left: calc(~"50% - (1rem / 2)");
+        top: calc(~"50% - (1rem / 2)");
     }
 }
