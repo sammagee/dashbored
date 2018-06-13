@@ -7,7 +7,7 @@
     }"
     class="progress"
     :class="{
-      'bg-grey-darkest': canSuccess,
+      'bg-indigo': canSuccess,
       'bg-red': ! canSuccess
     }"/>
 </template>

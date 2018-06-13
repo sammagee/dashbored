@@ -1,0 +1,24 @@
+.menu-wrap {
+  @apply .absolute .bg-grey-darkest .pin-r .pin-t .rounded-bl-lg .shadow-lg .text-grey-darkest .z-50;
+	transform: translate3d(16rem, -16rem, 0);
+	transition: transform 0.3s;
+}
+
+/* Shown menu */
+body.show-menu {
+  @apply .overflow-hidden;
+}
+
+body.show-menu .menu-wrap {
+	transform: translate3d(0, 0, 0);
+}
+
+body.show-menu .page-wrap {
+	transform: translate3d(-4rem, 4rem, 0);
+}
+
+body.show-menu .page::before {
+	opacity: 1;
+	transition: opacity 0.3s;
+	transform: translate3d(0, 0, 0);
+}

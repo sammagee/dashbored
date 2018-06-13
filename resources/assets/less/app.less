@@ -29,7 +29,26 @@ body {
     @apply .bg-black .text-white;
 }
 
+.page-wrap {
+  @apply .h-full .overflow-y-scroll;
+	-webkit-overflow-scrolling: touch;
+	transition: transform 0.3s;
+}
+
+.page {
+    @apply .bg-grey-lighter .h-full .shadow-lg;
+
+    &::before {
+        @apply .absolute .h-full .opacity-0 .pin-r .pin-t .w-full .z-10;
+        background: rgba(0, 0, 0, 0.3);
+        content: '';
+        transition: opacity 0.3s, transform 0s 0.3s;
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
 @import 'components/buttons';
+@import 'components/menu';
 @import 'components/tooltips';
 @import 'components/transitions';
 
