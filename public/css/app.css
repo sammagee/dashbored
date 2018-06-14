@@ -680,14 +680,12 @@ button,
 
 html {
   height: 100%;
-  overflow: hidden;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
 body {
   height: 100%;
-  overflow: auto;
 }
 
 [v-cloak] {
@@ -712,6 +710,10 @@ body {
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
+}
+
+.page-wrap {
+  overflow: hidden;
 }
 
 .page {
