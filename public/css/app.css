@@ -679,6 +679,7 @@ button,
 }
 
 html {
+  background-color: #111;
   height: 100%;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -702,18 +703,21 @@ body {
   color: #fff;
 }
 
+html,
+body,
+.page-wrap,
+.page {
+  overflow: hidden;
+}
+
 .page-wrap {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
-}
-
-.page-wrap {
-  overflow: hidden;
 }
 
 .page {
