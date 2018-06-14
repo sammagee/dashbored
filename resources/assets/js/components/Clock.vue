@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center mb-4 w-full">
-    <h1 class="font-black font-mono text-grey-black text-6xl">
+    <h1 class="font-black font-mono text-grey-black text-4xl md:text-6xl">
       {{ time }}<span class="font-semibold text-grey-dark text-xl"> {{ meridiem }}</span>
     </h1>
 
