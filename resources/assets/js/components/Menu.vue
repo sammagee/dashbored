@@ -67,6 +67,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
+  import Hammer from 'hammerjs'
   import Mousetrap from 'mousetrap'
 
   export default {
@@ -94,6 +95,29 @@
         .bind('ctrl+b', () => {
           this.toggle()
         })
+      
+      const swipe = new Hammer(document)
+      function getStartPosition(e) {
+          const delta_x = e.deltaX
+          const delta_y = e.deltaY
+          const final_x = e.srcEvent.pageX || e.srcEvent.screenX || 0
+          const final_y = e.srcEvent.pageY || e.srcEvent.screenY || 0
+
+          return {
+              x: final_x - delta_x,
+              y: final_y - delta_y
+          }
+      }
+
+      swipe.on('swiperight swipeleft', function (e) {
+          e.preventDefault()
+          const { x } = getStartPosition(e)
+          if (e.type == 'swipeleft' && x >= 0 && x <= 50) {
+              this.open()
+          } else {
+              this.close()
+          }
+      });
     },
 
     destroyed () {
