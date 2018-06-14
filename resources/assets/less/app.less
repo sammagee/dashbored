@@ -12,13 +12,13 @@
 }
 
 html {
-    @apply .h-full .overflow-hidden;
+    @apply .h-full;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
 }
 
 body {
-    @apply .h-full .overflow-auto;
+    @apply .h-full;
 }
 
 [v-cloak] {
@@ -33,6 +33,10 @@ body {
   @apply .h-full .overflow-y-scroll;
 	-webkit-overflow-scrolling: touch;
 	transition: transform 0.3s;
+}
+
+.page-wrap {
+    @apply .overflow-hidden;
 }
 
 .page {
