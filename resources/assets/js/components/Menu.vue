@@ -2,7 +2,7 @@
   <click-outside :do="close">
     <div @keyup.ctrl.49="toggle">
       <button
-        class="open-button fixed leading-0 mr-5 mt-5 pin-r pin-t text-grey focus:text-grey-dark hover:text-grey-dark z-40"
+        class="open-button absolute leading-0 mr-5 mt-5 pin-r pin-t text-grey focus:text-grey-dark hover:text-grey-dark z-40"
         type="button"
         @click="open">
         <svg class="fill-current h-6 text-inherit w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
