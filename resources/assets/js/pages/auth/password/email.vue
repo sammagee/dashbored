@@ -6,7 +6,7 @@
         <input
           name="email"
           type="email"
-          class="h-12 px-4 text-grey-darker w-full"
+          class="h-12 px-4 rounded-none text-grey-darker w-full"
           :class="{ 'pr-12': form.errors.has('username') }"
           placeholder="Email"
           v-model="form.email"

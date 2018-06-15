@@ -6,7 +6,7 @@
         <input
           name="email"
           type="email"
-          class="border-b border-grey-lighter h-12 px-4 text-grey-darker w-full"
+          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
           :class="{ 'pr-12': form.errors.has('username') }"
           placeholder="Email"
           readonly
@@ -20,7 +20,7 @@
         <input
           name="password"
           type="password"
-          class="border-b border-grey-lighter h-12 px-4 text-grey-darker w-full"
+          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
           :class="{ 'pr-12': form.errors.has('password') }"
           placeholder="Password"
           v-model="form.password"
@@ -34,7 +34,7 @@
         <input
           name="password_confirmation"
           type="password"
-          class="h-12 px-4 text-grey-darker w-full"
+          class="h-12 px-4 rounded-none text-grey-darker w-full"
           :class="{ 'pr-12': form.errors.has('password_confirmation') }"
           placeholder="Confirm Password"
           v-model="form.password_confirmation" />

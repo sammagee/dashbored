@@ -6,7 +6,7 @@
         <input
           name="username"
           type="text"
-          class="border-b border-grey-lighter h-12 px-4 text-grey-darker w-full"
+          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
           :class="{ 'pr-12': form.errors.has('username') }"
           placeholder="Username"
           v-model="form.username"
@@ -20,7 +20,7 @@
         <input
           name="password"
           type="password"
-          class="h-12 px-4 text-grey-darker w-full"
+          class="h-12 px-4 rounded-none text-grey-darker w-full"
           :class="{ 'pr-12': form.errors.has('password') }"
           placeholder="Password"
           v-model="form.password" />
@@ -81,6 +81,8 @@
 
         // Redirect home.
         this.$router.push({ name: 'home' })
+
+        flash('You have been logged in!')
       }
     }
   }

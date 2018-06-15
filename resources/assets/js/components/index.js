@@ -5,6 +5,7 @@ import ClickOutside from './ClickOutside'
 import Clock from './Clock'
 import Flash from './Flash'
 import HasError from './form/HasError'
+import Logo from './Logo'
 
 [
   Button,
@@ -12,7 +13,8 @@ import HasError from './form/HasError'
   ClickOutside,
   Clock,
   Flash,
-  HasError
+  HasError,
+  Logo
 ].forEach(Component => {
   Vue.component(Component.name, Component)
 })

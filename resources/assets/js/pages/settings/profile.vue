@@ -1,10 +1,6 @@
 <template>
   <div>
-    <header class="flex h-16 items-center justify-center">
-      <h1 class="text-xl">Profile</h1>
-    </header>
-
-    <div class="mx-auto w-64">
+    <div class="mx-auto w-full md:w-64">
       <form @submit.prevent="update" @keydown="form.onKeydown($event)">
         <div class="bg-white mb-4 overflow-hidden rounded shadow">
           <!-- Name -->
@@ -94,6 +90,8 @@
         const { data } = await this.form.patch('/api/settings/profile')
 
         this.$store.dispatch('auth/updateUser', { user: data })
+
+        flash('Your profile settings have been updated.')
       }
     }
   }

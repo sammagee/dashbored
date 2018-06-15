@@ -2,7 +2,7 @@
   <click-outside :do="close">
     <div @keyup.ctrl.49="toggle">
       <button
-        class="open-button fixed leading-0 mr-5 mt-5 pin-r pin-t text-grey hover:text-grey-dark z-40"
+        class="open-button fixed leading-0 mr-5 mt-5 pin-r pin-t text-grey focus:text-grey-dark hover:text-grey-dark z-40"
         type="button"
         @click="open">
         <svg class="fill-current h-6 text-inherit w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -19,10 +19,10 @@
           </div>
 
           <button
-            class="close-button leading-0 ml-5 text-grey hover:text-grey-dark"
+            class="close-button leading-0 ml-5 text-grey focus:text-grey-dark hover:text-grey-dark"
             ref="closeButton"
             @click="close">
-            <svg class="fill-current h-6 text-inherit w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <svg class="fill-current h-4 text-inherit w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
               <path d="M0 0h24v24H0z" fill="none"/>
             </svg>
@@ -32,7 +32,7 @@
         <div>
           <router-link
             :to="{ name: 'home' }"
-            class="hover:bg-grey-darker flex items-center no-underline px-5 py-3 text-grey-dark"
+            class="focus:bg-grey-darker hover:bg-grey-darker flex items-center no-underline px-5 py-3 text-grey-dark"
             exact-active-class="bg-grey-darker">
             <svg class="fill-current h-4 mr-2 text-inherit w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
@@ -43,7 +43,7 @@
 
           <router-link
             :to="{ name: 'settings.profile' }"
-            class="hover:bg-grey-darker flex items-center no-underline px-5 py-3 text-grey-dark"
+            class="focus:bg-grey-darker hover:bg-grey-darker flex items-center no-underline px-5 py-3 text-grey-dark"
             exact-active-class="bg-grey-darker">
             <svg class="fill-current h-4 mr-2 text-inherit w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M0 0h24v24H0z" fill="none"/>
@@ -52,7 +52,7 @@
             Settings
           </router-link>
 
-          <a class="hover:bg-grey-darker flex items-center no-underline px-5 py-3 text-grey-dark" href="#" @click.prevent="logout">
+          <a class="focus:bg-grey-darker hover:bg-grey-darker flex items-center no-underline px-5 py-3 text-grey-dark" href="#" @click.prevent="logout">
             <svg class="fill-current h-4 mr-2 text-inherit w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M0 0h24v24H0z" fill="none"/>
               <path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
@@ -95,29 +95,6 @@
         .bind('ctrl+b', () => {
           this.toggle()
         })
-      
-      const swipe = new Hammer(document)
-      function getStartPosition(e) {
-          const delta_x = e.deltaX
-          const delta_y = e.deltaY
-          const final_x = e.srcEvent.pageX || e.srcEvent.screenX || 0
-          const final_y = e.srcEvent.pageY || e.srcEvent.screenY || 0
-
-          return {
-              x: final_x - delta_x,
-              y: final_y - delta_y
-          }
-      }
-
-      swipe.on('swiperight swipeleft', function (e) {
-          e.preventDefault()
-          const { x } = getStartPosition(e)
-          if (e.type == 'swipeleft' && x >= 0 && x <= 50) {
-              this.open()
-          } else {
-              this.close()
-          }
-      });
     },
 
     destroyed () {

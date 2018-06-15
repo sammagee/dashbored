@@ -694,12 +694,12 @@ body {
 }
 
 ::-moz-selection {
-  background-color: #111;
+  background-color: #6574cd;
   color: #fff;
 }
 
 ::selection {
-  background-color: #111;
+  background-color: #6574cd;
   color: #fff;
 }
 
@@ -4166,7 +4166,7 @@ body.show-menu .page::before {
 }
 
 .p-16 {
-  padding: 3rem;
+  padding: 4rem;
 }
 
 .p-px {
@@ -4264,13 +4264,13 @@ body.show-menu .page::before {
 }
 
 .py-16 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .px-16 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .py-px {
@@ -4428,19 +4428,19 @@ body.show-menu .page::before {
 }
 
 .pt-16 {
-  padding-top: 3rem;
+  padding-top: 4rem;
 }
 
 .pr-16 {
-  padding-right: 3rem;
+  padding-right: 4rem;
 }
 
 .pb-16 {
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 .pl-16 {
-  padding-left: 3rem;
+  padding-left: 4rem;
 }
 
 .pt-px {
@@ -9243,7 +9243,7 @@ body.show-menu .page::before {
   }
 
   .sm\:p-16 {
-    padding: 3rem;
+    padding: 4rem;
   }
 
   .sm\:p-px {
@@ -9341,13 +9341,13 @@ body.show-menu .page::before {
   }
 
   .sm\:py-16 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .sm\:px-16 {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .sm\:py-px {
@@ -9505,19 +9505,19 @@ body.show-menu .page::before {
   }
 
   .sm\:pt-16 {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
 
   .sm\:pr-16 {
-    padding-right: 3rem;
+    padding-right: 4rem;
   }
 
   .sm\:pb-16 {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
   }
 
   .sm\:pl-16 {
-    padding-left: 3rem;
+    padding-left: 4rem;
   }
 
   .sm\:pt-px {
@@ -14296,7 +14296,7 @@ body.show-menu .page::before {
   }
 
   .md\:p-16 {
-    padding: 3rem;
+    padding: 4rem;
   }
 
   .md\:p-px {
@@ -14394,13 +14394,13 @@ body.show-menu .page::before {
   }
 
   .md\:py-16 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .md\:px-16 {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .md\:py-px {
@@ -14558,19 +14558,19 @@ body.show-menu .page::before {
   }
 
   .md\:pt-16 {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
 
   .md\:pr-16 {
-    padding-right: 3rem;
+    padding-right: 4rem;
   }
 
   .md\:pb-16 {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
   }
 
   .md\:pl-16 {
-    padding-left: 3rem;
+    padding-left: 4rem;
   }
 
   .md\:pt-px {
@@ -19349,7 +19349,7 @@ body.show-menu .page::before {
   }
 
   .lg\:p-16 {
-    padding: 3rem;
+    padding: 4rem;
   }
 
   .lg\:p-px {
@@ -19447,13 +19447,13 @@ body.show-menu .page::before {
   }
 
   .lg\:py-16 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .lg\:px-16 {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .lg\:py-px {
@@ -19611,19 +19611,19 @@ body.show-menu .page::before {
   }
 
   .lg\:pt-16 {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
 
   .lg\:pr-16 {
-    padding-right: 3rem;
+    padding-right: 4rem;
   }
 
   .lg\:pb-16 {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
   }
 
   .lg\:pl-16 {
-    padding-left: 3rem;
+    padding-left: 4rem;
   }
 
   .lg\:pt-px {
@@ -24402,7 +24402,7 @@ body.show-menu .page::before {
   }
 
   .xl\:p-16 {
-    padding: 3rem;
+    padding: 4rem;
   }
 
   .xl\:p-px {
@@ -24500,13 +24500,13 @@ body.show-menu .page::before {
   }
 
   .xl\:py-16 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .xl\:px-16 {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .xl\:py-px {
@@ -24664,19 +24664,19 @@ body.show-menu .page::before {
   }
 
   .xl\:pt-16 {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
 
   .xl\:pr-16 {
-    padding-right: 3rem;
+    padding-right: 4rem;
   }
 
   .xl\:pb-16 {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
   }
 
   .xl\:pl-16 {
-    padding-left: 3rem;
+    padding-left: 4rem;
   }
 
   .xl\:pt-px {
