@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Button from './Button'
+import Checkbox from './Checkbox'
 import Child from './Child'
 import ClickOutside from './ClickOutside'
 import Clock from './Clock'
@@ -9,6 +10,7 @@ import Logo from './Logo'
 
 [
   Button,
+  Checkbox,
   Child,
   ClickOutside,
   Clock,

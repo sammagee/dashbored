@@ -122,6 +122,8 @@
         await this.$store.dispatch('auth/logout')
         // Redirect to login.
         this.$router.push({ name: 'auth.login' })
+
+        flash('You have been logged out!')
       }
     }
   }

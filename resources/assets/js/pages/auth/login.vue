@@ -20,12 +20,23 @@
         <input
           name="password"
           type="password"
-          class="h-12 px-4 rounded-none text-grey-darker w-full"
+          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
           :class="{ 'pr-12': form.errors.has('password') }"
           placeholder="Password"
           v-model="form.password" />
 
         <has-error :form="form" field="password" />
+      </div>
+
+      <!-- Remember -->
+      <div>
+        <v-checkbox
+          class="flex h-12 items-center px-4 rounded-none text-grey-darker w-full"
+          toggleClass="bg-grey-lightest"
+          v-model="remember"
+          name="remember">
+          Remember
+        </v-checkbox>
       </div>
     </div>
 
