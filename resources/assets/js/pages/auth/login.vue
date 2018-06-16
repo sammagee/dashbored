@@ -73,7 +73,7 @@
         username: '',
         password: ''
       }),
-      remember: false
+      remember: true
     }),
 
     methods: {
