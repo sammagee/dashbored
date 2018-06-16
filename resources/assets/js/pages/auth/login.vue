@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="login" @keydown="form.onKeydown($event)">
-    <div class="bg-white mb-4 overflow-hidden rounded shadow">
+    <div class="bg-white mb-5 overflow-hidden rounded shadow">
       <!-- Username -->
       <div>
         <input
@@ -29,16 +29,16 @@
       </div>
     </div>
 
-    <div class="mb-2">
+    <div class="mb-5">
       <v-button class="block w-full" :loading="form.busy">
         Login
       </v-button>
     </div>
 
-    <div class="text-center">
+    <div class="leading-0 text-center">
       <router-link
         :to="{ name: 'auth.password.request' }"
-        class="font-bold no-underline text-black text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-darkest transition-all">
+        class="font-bold no-underline text-grey-darkest text-xs hover:text-grey-dark focus:text-grey-dark active:text-grey-darkest transition-all">
         Forgot your info?
       </router-link>
     </div>

@@ -2,7 +2,7 @@
   <div>
     <div class="mx-auto w-full md:w-64">
       <form @submit.prevent="update" @keydown="form.onKeydown($event)">
-        <div class="bg-white mb-4 overflow-hidden rounded shadow">
+        <div class="bg-white mb-5 overflow-hidden rounded shadow">
           <!-- Password -->
           <div>
             <input
