@@ -14,7 +14,7 @@
         </h1>
       </div>
 
-      <nav class="hidden md:flex flex-1 h-16 md:justify-center mx-auto -mb-px">
+      <nav class="hidden md:flex flex-1 h-16 md:justify-center mx-auto">
         <slot name="nav"></slot>
       </nav>
 
@@ -22,7 +22,7 @@
     </div>
 
     <div class="flex md:hidden h-16 items-center px-5 overflow-x-scroll">
-      <nav class="flex flex-1 h-16 md:justify-center mx-auto -mb-px">
+      <nav class="flex flex-1 h-16 md:justify-center mx-auto">
         <slot name="nav-mobile"></slot>
       </nav>
     </div>
