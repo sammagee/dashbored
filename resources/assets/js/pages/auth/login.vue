@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="login" @keydown="form.onKeydown($event)">
-    <div class="bg-white mb-4 overflow-hidden rounded shadow">
+    <div class="bg-white mb-5 overflow-hidden rounded shadow">
       <!-- Username -->
       <div>
         <input
@@ -20,25 +20,36 @@
         <input
           name="password"
           type="password"
-          class="h-12 px-4 rounded-none text-grey-darker w-full"
+          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
           :class="{ 'pr-12': form.errors.has('password') }"
           placeholder="Password"
           v-model="form.password" />
 
         <has-error :form="form" field="password" />
       </div>
+
+      <!-- Remember -->
+      <div>
+        <v-checkbox
+          class="flex h-12 items-center px-4 rounded-none text-grey-darker w-full"
+          toggleClass="bg-grey-lightest"
+          v-model="remember"
+          name="remember">
+          Remember
+        </v-checkbox>
+      </div>
     </div>
 
-    <div class="mb-2">
+    <div class="mb-5">
       <v-button class="block w-full" :loading="form.busy">
         Login
       </v-button>
     </div>
 
-    <div class="text-center">
+    <div class="leading-0 text-center">
       <router-link
         :to="{ name: 'auth.password.request' }"
-        class="font-bold no-underline text-black text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-darkest transition-all">
+        class="font-bold no-underline text-grey-darkest text-xs hover:text-grey-dark focus:text-grey-dark active:text-grey-darkest transition-all">
         Forgot your info?
       </router-link>
     </div>
@@ -62,7 +73,7 @@
         username: '',
         password: ''
       }),
-      remember: false
+      remember: true
     }),
 
     methods: {

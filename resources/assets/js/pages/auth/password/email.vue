@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="request" @keydown="form.onKeydown($event)">
-    <div class="bg-white mb-4 overflow-hidden rounded shadow">
+    <div class="bg-white mb-5 overflow-hidden rounded shadow">
       <!-- Email -->
       <div>
         <input
