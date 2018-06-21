@@ -3,7 +3,7 @@ const PasswordEmailPage = () => import('~/pages/auth/password/email').then(m => 
 const PasswordResetPage = () => import('~/pages/auth/password/reset').then(m => m.default || m)
 const NotFoundPage = () => import('~/pages/errors/404').then(m => m.default || m)
 
-const HomePage = () => import('~/pages/home').then(m => m.default || m)
+const HomePage = () => import('~/pages/home/index').then(m => m.default || m)
 const Settings = () => import('~/pages/settings/index').then(m => m.default || m)
 const SettingsProfile = () => import('~/pages/settings/profile').then(m => m.default || m)
 const SettingsSecurity = () => import('~/pages/settings/security').then(m => m.default || m)

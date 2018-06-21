@@ -41,8 +41,9 @@
       const { appName } = window.config
 
       return {
-        title: appName,
-        titleTemplate: `%s — ${appName}`
+        titleTemplate: (title) => {
+          return title ? `${title} — ${appName}` : appName
+        }
       }
     },
 

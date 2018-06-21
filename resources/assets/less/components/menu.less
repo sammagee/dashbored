@@ -1,12 +1,19 @@
 .menu-wrap {
-  @apply .absolute .bg-grey-darkest .invisible .opacity-0 .pin-r .pin-t .rounded-bl-lg .shadow-lg .text-grey-darkest .z-50;
+  @apply .absolute .bg-grey-darkest .invisible .opacity-0 .pin-r .pin-t .rounded-bl-lg .shadow-lg .text-grey-darkest .transition-all .z-50;
 	transform: translate3d(16rem, -16rem, 0);
-	transition: transform 0.3s;
+}
+
+.open-button {
+	@apply .opacity-100 .transition-all .visible;
 }
 
 /* Shown menu */
 body.show-menu {
   @apply .overflow-hidden;
+}
+
+body.show-menu .open-button {
+	@apply .invisible .opacity-100;
 }
 
 body.show-menu .menu-wrap {

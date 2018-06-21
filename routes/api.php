@@ -22,6 +22,8 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     Route::patch('settings/profile', 'Settings\ProfileController@update');
     Route::patch('settings/security', 'Settings\SecurityController@update');
+
+    Route::apiResource('tasks', 'API\TaskController');
 });
 
 Route::group(['middleware' => 'guest:api'], function () {

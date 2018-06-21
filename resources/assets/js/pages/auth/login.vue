@@ -49,7 +49,7 @@
     <div class="leading-0 text-center">
       <router-link
         :to="{ name: 'auth.password.request' }"
-        class="font-bold no-underline text-grey-darkest text-xs hover:text-grey-dark focus:text-grey-dark active:text-grey-darkest transition-all">
+        class="font-bold no-underline text-grey-dark text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-dark transition-all">
         Forgot your info?
       </router-link>
     </div>

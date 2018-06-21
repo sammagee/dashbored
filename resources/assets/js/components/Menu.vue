@@ -1,6 +1,6 @@
 <template>
   <click-outside :do="close">
-    <div @keyup.ctrl.49="toggle">
+    <div @keyup.ctrl.49="toggle" v-if="user">
       <button
         class="open-button absolute leading-0 mr-5 mt-5 pin-r pin-t text-grey focus:text-grey-dark hover:text-grey-dark z-40"
         type="button"
