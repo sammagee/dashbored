@@ -4,7 +4,9 @@
 
     <div class="page-wrap" ref="content">
       <div class="page">
-        <child />
+        <transition name="fade" mode="out-in" appear>
+          <child />
+        </transition>
       </div>
     </div>
   </div>

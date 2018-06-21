@@ -1,5 +1,5 @@
 .menu-wrap {
-  @apply .absolute .bg-grey-darkest .pin-r .pin-t .rounded-bl-lg .shadow-lg .text-grey-darkest .z-50;
+  @apply .absolute .bg-grey-darkest .invisible .opacity-0 .pin-r .pin-t .rounded-bl-lg .shadow-lg .text-grey-darkest .z-50;
 	transform: translate3d(16rem, -16rem, 0);
 	transition: transform 0.3s;
 }
@@ -10,7 +10,9 @@ body.show-menu {
 }
 
 body.show-menu .menu-wrap {
+	@apply .opacity-100 .visible;
 	transform: translate3d(0, 0, 0);
+	visibility: visible;
 }
 
 body.show-menu .page-wrap {

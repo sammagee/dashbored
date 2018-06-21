@@ -2,7 +2,7 @@
   <div id="app" class="h-full">
     <loading ref="loading" />
 
-    <transition name="page" mode="out-in">
+    <transition name="fade" mode="out-in">
       <component v-if="layout" :is="layout" />
     </transition>
 

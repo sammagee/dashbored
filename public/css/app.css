@@ -874,6 +874,8 @@ button:focus {
 .menu-wrap {
   position: absolute;
   background-color: #212121;
+  visibility: hidden;
+  opacity: 0;
   right: 0;
   top: 0;
   border-bottom-left-radius: .5rem;
@@ -896,8 +898,11 @@ body.show-menu {
 }
 
 body.show-menu .menu-wrap {
+  opacity: 1;
+  visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  visibility: visible;
 }
 
 body.show-menu .page-wrap {
