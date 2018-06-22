@@ -65,14 +65,7 @@
       listen () {
         Echo.private(`App.${this.user.id}.Tasks`)
           .listen('TaskAdded', event => {
-            this.$store.tasks.push(event.task)
-          })
-          .listen('TaskUpdated', event => {
-            let originalTask = _.find(this.$store.tasks, {
-              'id': event.task.id
-            })
-
-            console.log(event.task.id)
+            this.tasks.push(event.task)
           })
       },
 
