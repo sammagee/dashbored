@@ -53,7 +53,7 @@ let colors = {
   'grey': '#bcbcbc',
   'grey-light': '#dddddd',
   'grey-lighter': '#f1f1f1',
-  'grey-lightest': '#fafafa',
+  'grey-lightest': '#f8f8f8',
   'white': '#ffffff',
 
   'red-darkest': '#3b0d0c',
@@ -401,6 +401,7 @@ module.exports = {
     default: '1px',
     '0': '0',
     '2': '2px',
+    '3': '3px',
     '4': '4px',
     '8': '8px',
   },

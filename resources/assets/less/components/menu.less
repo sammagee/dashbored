@@ -23,11 +23,16 @@ body.show-menu .menu-wrap {
 }
 
 body.show-menu .page-wrap {
+	@apply .overflow-hidden;
 	transform: translate3d(-4rem, 4rem, 0);
 }
 
+body.show-menu .page {
+	@apply .overflow-hidden;
+}
+
 body.show-menu .page::before {
-	opacity: 1;
+	@apply .opacity-100 .z-40;
 	transition: opacity 0.3s;
 	transform: translate3d(0, 0, 0);
 }

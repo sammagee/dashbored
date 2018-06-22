@@ -12,7 +12,7 @@ class Task extends Model
      * @var array
      */
     protected $fillable = [
-      'description', 'status'
+        'user_id', 'description', 'status'
     ];
 
     protected $casts = [

@@ -1,22 +1,10 @@
 <template>
-  <div class="container flex flex-col h-full items-center justify-center overflow-hidden py-16">
+  <div class="container flex flex-col h-full items-center justify-center py-16">
     <clock></clock>
 
     <div class="flex flex-wrap justify-center max-h-full w-full -mx-4">
       <div class="max-h-full p-4 w-full md:w-1/2 lg:w-1/3">
         <tasks></tasks>
-      </div>
-
-      <div class="p-4 w-full md:w-1/2 lg:w-1/3">
-        <div class="bg-white p-16 rounded-lg shadow-lg">
-
-        </div>
-      </div>
-
-      <div class="p-4 w-full md:w-1/2 lg:w-1/3">
-        <div class="bg-white p-16 rounded-lg shadow-lg">
-
-        </div>
       </div>
     </div>
   </div>

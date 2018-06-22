@@ -34,7 +34,7 @@ $config = [
     {{-- Styles --}}
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
   </head>
-  <body class="bg-grey-lighter h-screen font-sans text-black">
+  <body class="bg-grey-lighter font-sans text-black">
     <div id="app"></div>
 
     {{-- Global Configuration Object --}}

@@ -11,7 +11,7 @@
           placeholder="Username"
           v-model="form.username"
           autofocus />
-        
+
         <has-error :form="form" field="username" />
       </div>
 
@@ -46,7 +46,13 @@
       </v-button>
     </div>
 
-    <div class="leading-0 text-center">
+    <div class="flex justify-between leading-0">
+      <router-link
+        :to="{ name: 'auth.register' }"
+        class="font-bold no-underline text-grey-dark text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-dark transition-all">
+        Register
+      </router-link>
+
       <router-link
         :to="{ name: 'auth.password.request' }"
         class="font-bold no-underline text-grey-dark text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-dark transition-all">

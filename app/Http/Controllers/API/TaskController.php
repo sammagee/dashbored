@@ -28,10 +28,10 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $task = Task::create([
-        'user_id' => $request->user()->id,
-        'title' => $request->description,
-        'status' => false
-      ]);
+            'user_id' => $request->user_id,
+            'description' => $request->description,
+            'status' => $request->status,
+        ]);
 
         return new TaskResource($task);
     }

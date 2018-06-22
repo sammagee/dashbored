@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black h-full overflow-hidden">
+  <div class="bg-black h-full">
     <v-menu></v-menu>
 
     <div class="page-wrap" ref="content">

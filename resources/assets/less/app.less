@@ -19,6 +19,10 @@ html {
 
 body {
     @apply .h-full;
+
+    &.swal2-shown.swal2-height-auto {
+        height: 100% !important;
+    }
 }
 
 [v-cloak] {
@@ -30,17 +34,17 @@ body {
 }
 
 html, body, .page-wrap, .page {
-    @apply .overflow-hidden;
+    overflow-x: hidden;
 }
 
 .page-wrap {
-  @apply .h-full .overflow-y-auto;
+  @apply .h-full;
 	-webkit-overflow-scrolling: touch;
 	transition: transform 0.3s;
 }
 
 .page {
-    @apply .bg-grey-lighter .h-full .shadow-lg;
+    @apply .bg-grey-lighter .h-full;
 
     &::before {
         @apply .absolute .h-full .opacity-0 .pin-r .pin-t .w-full .z-10;
