@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Http\Requests;
-use App\Task;
-use App\Http\Resources\TaskResource;
-use Illuminate\Http\Request;
+use App\Events\TaskAdded;
+use App\Events\TaskUpdated;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Resources\TaskResource;
+use App\Task;
+use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
@@ -33,6 +35,8 @@ class TaskController extends Controller
             'status' => $request->status,
         ]);
 
+        broadcast(new TaskAdded($request->user(), $task))->toOthers();
+
         return new TaskResource($task);
     }
 
@@ -48,6 +52,8 @@ class TaskController extends Controller
         }
 
         $task->update($request->only(['description', 'status']));
+
+        broadcast(new TaskUpdated($request->user(), $task))->toOthers();
 
         return new TaskResource($task);
     }

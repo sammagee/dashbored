@@ -15,23 +15,15 @@
       </header>
 
       <div class="max-h-64 overflow-x-hidden overflow-y-auto">
-        <v-checkbox
-          class="flex h-12 items-center px-4 rounded-none text-grey-darker w-full"
-          toggleClass="bg-grey-lightest"
+        <task
           v-for="task in filteredTasks"
           :key="task.id"
-          :checked="task.status"
-          :id="`task-${task.id}`"
-          :name="`task-${task.id}`"
-          v-model="task.status"
-          @click="toggleTask(task)">
-          {{ task.description }}
-        </v-checkbox>
+          :task="task"></task>
       </div>
     </div>
 
     <footer class="px-4 py-2">
-      <a class="font-bold no-underline text-grey-dark text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-dark transition-all" href="#" @click="showCompleted = !showCompleted">
+      <a class="font-bold no-underline text-grey-dark text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-dark transition-all" href="#" @click.prevent="showCompleted = !showCompleted">
         {{ showCompleted ? 'Hide Completed' : 'Show Completed' }}
       </a>
     </footer>
@@ -40,9 +32,11 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
+  import Task from './task'
 
   export default {
     name: 'tasks',
+    components: { Task },
 
     data: () => ({
       newTask: '',
@@ -62,13 +56,28 @@
     },
 
     created () {
+      this.listen();
+
       this.fetchTasks()
     },
 
     methods: {
+      listen () {
+        Echo.private(`App.${this.user.id}.Tasks`)
+          .listen('TaskAdded', event => {
+            this.$store.tasks.push(event.task)
+          })
+          .listen('TaskUpdated', event => {
+            let originalTask = _.find(this.$store.tasks, {
+              'id': event.task.id
+            })
+
+            console.log(event.task.id)
+          })
+      },
+
       ...mapActions({
-        fetchTasks: 'tasks/fetchTasks',
-        toggleTask: 'tasks/toggleTask'
+        fetchTasks: 'tasks/fetchTasks'
       }),
 
       addTask (e) {
