@@ -5,7 +5,7 @@
         class="bg-white p-4 transition-all z-10"
         :class="{ 'rounded-b-lg': tasks.length == 0 }">
         <input
-          class="bg-grey-lightest focus:bg-white border border-grey-lightest h-12 px-4 rounded-lg text-grey-darker transition-all w-full"
+          class="appearance-none bg-grey-lightest focus:bg-white border border-grey-lightest h-12 px-4 rounded-lg text-grey-darker transition-all w-full"
           type="text"
           name="task"
           placeholder="What do you want to do?"
