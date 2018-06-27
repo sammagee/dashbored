@@ -106,7 +106,7 @@
 
         this.$store.dispatch('auth/updateUser', { user: data })
 
-        flash('Your profile settings have been updated.')
+        flash('Your account settings have been updated.')
       }
     }
   }
