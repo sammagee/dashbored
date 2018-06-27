@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center p-6">
+  <div class="container flex items-center justify-center py-6">
     <child />
   </div>
 </template>

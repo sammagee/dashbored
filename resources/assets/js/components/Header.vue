@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white mb-5 shadow">
+  <header class="bg-white mb-6 shadow">
     <div class="flex h-16 items-center pl-5 pr-16 md:pr-5">
       <div class="flex flex-1 items-center mr-auto">
         <router-link
