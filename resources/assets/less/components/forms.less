@@ -1,0 +1,56 @@
+.form-input {
+    @apply .flex .flex-col .mb-4;
+
+    label {
+        @apply .flex .font-bold .items-center .leading-none .mb-2 .text-grey-darkest .text-sm;
+
+        .error {
+            @apply .flex .font-bold .leading-none ml-2 .text-red .text-2xs;
+        }
+    }
+
+    p.hint {
+        @apply .flex-1 .leading-normal .mb-2 .text-grey-dark .text-xs;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+        @apply .bg-grey-lightest .border-2 .border-grey-lightest .h-12 .px-4 .rounded .text-grey-darker .transition-all .w-full;
+
+        &:focus {
+            @apply .bg-transparent;
+        }
+    }
+
+    &.checkbox {
+        @apply .flex-row .items-center;
+
+        input[type=checkbox] {
+            @apply .absolute .opacity-0;
+            left: -9999px;
+            top: -9999px;
+        }
+
+        label {
+            @apply .flex .items-center .mb-0;
+        }
+
+        .box {
+            @apply .flex .items-center .justify-center .bg-grey-lightest .cursor-pointer .h-8 .rounded .w-8;
+        }
+
+        .hint {
+            @apply .font-normal .mb-0;
+        }
+
+        input[type=checkbox]:checked ~ .box::after {
+            @apply .border-b-2 .border-l-2 border-grey-darkest .inline-block .relative;
+            content: "";
+            top: -2px;
+            height: 8px;
+            transform: rotate(-45deg);
+            width: 16px;
+        }
+    }
+}

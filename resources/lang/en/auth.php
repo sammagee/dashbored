@@ -13,6 +13,6 @@ return [
     */
 
     'login' => 'You have been logged in!',
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'Invalid credentials',
+    'throttle' => 'Try again in :seconds seconds.',
 ];

@@ -1,54 +1,81 @@
 <template>
-  <form @submit.prevent="reset" @keydown="form.onKeydown($event)">
-    <div class="bg-white mb-5 overflow-hidden rounded shadow">
-      <!-- Email -->
-      <div>
-        <input
-          name="email"
-          type="email"
-          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
-          :class="{ 'pr-12': form.errors.has('username') }"
-          placeholder="Email"
-          readonly
-          v-model="form.email" />
+  <div class="w-full md:w-1/2">
+    <header class="flex items-center justify-center py-4">
+      <router-link :to="{ name: 'home' }" class="leading-0">
+        <logo class="mr-2 w-8"></logo>
+      </router-link>
+      <h1 class="text-grey-darkest text-xl">{{ title }}</h1>
+    </header>
 
-        <has-error :form="form" field="email" />
+    <form class="rounded shadow-lg" @submit.prevent="reset" @keydown="form.onKeydown($event)">
+      <div class="bg-white overflow-hidden p-4 rounded">
+        <!-- Email -->
+        <div class="form-input">
+          <label for="email">
+            Email
+            <has-error :form="form" field="email" />
+          </label>
+
+          <p id="email-hint" class="hint">The email associated with your account.</p>
+
+          <input
+            aria-describedby="email-hint"
+            id="email"
+            name="email"
+            type="email"
+            readonly
+            v-model="form.email"
+            placeholder="john@example.com" />
+        </div>
+
+        <div class="md:flex">
+          <!-- Password -->
+          <div class="form-input md:mr-4 md:w-1/2">
+            <label for="password">
+              Password
+              <has-error :form="form" field="password" />
+            </label>
+
+            <p id="password-hint" class="hint">Choose a new password. Must be at least 6 characters. You should probably make it pretty safe, but something you can remember this time.</p>
+
+            <input
+              aria-describedby="password-hint"
+              id="password"
+              name="password"
+              type="password"
+              v-model="form.password"
+              placeholder="********"
+              autofocus />
+          </div>
+
+          <!-- Password Confirmation -->
+          <div class="form-input md:w-1/2">
+            <label for="password_confirmation">
+              Confirm Password
+              <has-error :form="form" field="password_confirmation" />
+            </label>
+
+            <p id="password-confirmation-hint" class="hint">Confirm that the password you typed before this is the one you want.</p>
+
+            <input
+              aria-describedby="password-confirmation-hint"
+              id="password_confirmation"
+              name="password_confirmation"
+              type="password"
+              v-model="form.password_confirmation"
+              placeholder="********" />
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div>
+          <v-button class="w-full" :loading="form.busy">
+            Reset
+          </v-button>
+        </div>
       </div>
-
-      <!-- Password -->
-      <div>
-        <input
-          name="password"
-          type="password"
-          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
-          :class="{ 'pr-12': form.errors.has('password') }"
-          placeholder="Password"
-          v-model="form.password"
-          autofocus />
-
-        <has-error :form="form" field="password" />
-      </div>
-
-      <!-- Password Confirmation -->
-      <div>
-        <input
-          name="password_confirmation"
-          type="password"
-          class="h-12 px-4 rounded-none text-grey-darker w-full"
-          :class="{ 'pr-12': form.errors.has('password_confirmation') }"
-          placeholder="Confirm Password"
-          v-model="form.password_confirmation" />
-
-        <has-error :form="form" field="password_confirmation" />
-      </div>
-    </div>
-
-    <div>
-      <v-button class="block w-full" :loading="form.busy">
-        Reset
-      </v-button>
-    </div>
-  </form>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -70,7 +97,8 @@
         email: '',
         password: '',
         password_confirmation: ''
-      })
+      }),
+      title: window.config.appName
     }),
 
     created () {

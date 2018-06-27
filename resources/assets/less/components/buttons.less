@@ -12,30 +12,42 @@ button:focus {
 }
 
 .button {
-    @apply .bg-grey-darkest .font-semibold .h-12 .inline-block .no-underline .px-4 .rounded .shadow .text-center .text-sm .text-white .tracking-md .transition-all .uppercase .whitespace-no-wrap;
+    @apply .bg-indigo .font-semibold .h-12 .inline-flex .items-center .justify-center .no-underline .px-5 .rounded .shadow-md .text-center .text-sm .text-white .tracking-md .transition-all .uppercase .whitespace-no-wrap;
 
     &:focus, &:hover {
-        @apply .bg-grey-darker .shadow-md;
+        @apply .bg-indigo-light .shadow-lg;
     }
 
     &:active {
-        @apply .bg-grey-darkest .shadow;
+        @apply .bg-indigo .shadow-md;
+    }
+}
+
+.button--white {
+    @apply .button .bg-white .shadow-md .text-indigo-darkest;
+
+    &:focus, &:hover {
+        @apply .bg-grey-lightest .shadow-lg;
+    }
+
+    &:active {
+        @apply .bg-white .shadow-md;
     }
 }
 
 .button:disabled {
-    @apply .bg-grey-dark .cursor-not-allowed;
+    @apply .cursor-not-allowed .opacity-75;
 }
 
 .button-icon {
-    @apply .bg-grey-darkest .flex .h-10 .items-center .justify-center .no-underline .rounded-full .shadow .text-white .transition-all .w-10 .whitespace-no-wrap;
+    @apply .bg-grey-darkest .flex .h-10 .items-center .justify-center .no-underline .rounded-full .shadow-md .text-white .transition-all .w-10 .whitespace-no-wrap;
 
     &:focus, &:hover {
-        @apply .bg-grey-darker .shadow-md;
+        @apply .bg-grey-darker .shadow-lg;
     }
 
     &:active {
-        @apply .bg-grey-darkest .shadow;
+        @apply .bg-grey-darkest .shadow-md;
     }
 }
 

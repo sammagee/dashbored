@@ -1,87 +1,134 @@
 <template>
-  <form @submit.prevent="register" @keydown="form.onKeydown($event)">
-    <div class="bg-white mb-5 overflow-hidden rounded shadow">
-      <!-- Name -->
-      <div>
-        <input
-          name="name"
-          type="text"
-          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
-          :class="{ 'pr-12': form.errors.has('name') }"
-          placeholder="Name"
-          v-model="form.name"
-          autofocus />
-
-        <has-error :form="form" field="name" />
-      </div>
-
-      <!-- Username -->
-      <div>
-        <input
-          name="username"
-          type="text"
-          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
-          :class="{ 'pr-12': form.errors.has('username') }"
-          placeholder="Username"
-          v-model="form.username" />
-
-        <has-error :form="form" field="username" />
-      </div>
-
-      <!-- Email -->
-      <div>
-        <input
-          name="email"
-          type="email"
-          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
-          :class="{ 'pr-12': form.errors.has('email') }"
-          placeholder="Email"
-          v-model="form.email" />
-
-        <has-error :form="form" field="email" />
-      </div>
-
-      <!-- Password -->
-      <div>
-        <input
-          name="password"
-          type="password"
-          class="border-b border-grey-lighter h-12 px-4 rounded-none text-grey-darker w-full"
-          :class="{ 'pr-12': form.errors.has('password') }"
-          placeholder="Password"
-          v-model="form.password" />
-
-        <has-error :form="form" field="password" />
-      </div>
-
-      <!-- Password -->
-      <div>
-        <input
-          name="password_confirmation"
-          type="password"
-          class="h-12 px-4 rounded-none text-grey-darker w-full"
-          :class="{ 'pr-12': form.errors.has('password_confirmation') }"
-          placeholder="Confirm Password"
-          v-model="form.password_confirmation" />
-
-        <has-error :form="form" field="password_confirmation" />
-      </div>
-    </div>
-
-    <div class="mb-5">
-      <v-button class="block w-full" :loading="form.busy">
-        Register
-      </v-button>
-    </div>
-
-    <div class="flex justify-center leading-0">
-      <router-link
-        :to="{ name: 'auth.login' }"
-        class="font-bold no-underline text-grey-dark text-xs hover:text-grey-darker focus:text-grey-darker active:text-grey-dark transition-all">
-        Login
+  <div class="w-full md:w-1/2">
+    <header class="flex items-center justify-center py-4">
+      <router-link :to="{ name: 'home' }" class="leading-0">
+        <logo class="mr-2 w-8"></logo>
       </router-link>
-    </div>
-  </form>
+      <h1 class="text-grey-darkest text-xl">{{ title }}</h1>
+    </header>
+
+    <form class="rounded shadow-lg" @submit.prevent="register" @keydown="form.onKeydown($event)">
+      <div class="bg-grey-lightest flex overflow-hidden rounded-t">
+        <router-link
+          :to="{ name: 'auth.login' }"
+          class="flex font-bold h-12 items-center justify-center no-underline text-grey-darker text-sm w-1/2"
+          active-class="bg-white">
+          Login
+        </router-link>
+
+        <router-link
+          :to="{ name: 'auth.register' }"
+          class="flex font-bold h-12 items-center justify-center no-underline text-grey-darker text-sm w-1/2"
+          active-class="bg-white">
+          Register
+        </router-link>
+      </div>
+
+      <div class="bg-white overflow-hidden p-4 rounded-b">
+        <div class="md:flex">
+          <!-- Name -->
+          <div class="form-input md:mr-4 md:w-1/2">
+            <label for="name">
+              Name
+              <has-error :form="form" field="name" />
+            </label>
+
+            <p id="name-hint" class="hint">Some go by their first name, some by their full.</p>
+
+            <input
+              aria-describedby="name-hint"
+              id="name"
+              name="name"
+              type="text"
+              v-model="form.name"
+              placeholder="John Doe"
+              autofocus />
+          </div>
+
+          <!-- Username -->
+          <div class="form-input md:w-1/2">
+            <label for="username">
+              Username
+              <has-error :form="form" field="username" />
+            </label>
+
+            <p id="username-hint" class="hint">Any mix of letters/numbers you want - must be between 3 and 20 characters.</p>
+
+            <input
+              aria-describedby="username-hint"
+              id="username"
+              name="username"
+              type="text"
+              v-model="form.username"
+              placeholder="johndoe" />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-input">
+          <label for="email">
+            Email
+            <has-error :form="form" field="email" />
+          </label>
+
+          <p id="email-hint" class="hint">The email you'd like to receive emails on. (Almost never)</p>
+
+          <input
+            aria-describedby="email-hint"
+            id="email"
+            name="email"
+            type="email"
+            v-model="form.email"
+            placeholder="john@example.com" />
+        </div>
+
+        <div class="md:flex">
+          <!-- Password -->
+          <div class="form-input md:mr-4 md:w-1/2">
+            <label for="password">
+              Password
+              <has-error :form="form" field="password" />
+            </label>
+
+            <p id="password-hint" class="hint">Must be at least 6 characters. You should probably make it pretty safe.</p>
+
+            <input
+              aria-describedby="password-hint"
+              id="password"
+              name="password"
+              type="password"
+              v-model="form.password"
+              placeholder="********" />
+          </div>
+
+          <!-- Password Confirmation -->
+          <div class="form-input md:w-1/2">
+            <label for="password_confirmation">
+              Confirm Password
+              <has-error :form="form" field="password_confirmation" />
+            </label>
+
+            <p id="password-confirmation-hint" class="hint">Confirm that the password you typed before this is the one you want.</p>
+
+            <input
+              aria-describedby="password-confirmation-hint"
+              id="password_confirmation"
+              name="password_confirmation"
+              type="password"
+              v-model="form.password_confirmation"
+              placeholder="********" />
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div>
+          <v-button class="w-full" :loading="form.busy">
+            Register
+          </v-button>
+        </div>
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -103,7 +150,8 @@
         email: '',
         password: '',
         password_confirmation: ''
-      })
+      }),
+      title: window.config.appName
     }),
 
     methods: {

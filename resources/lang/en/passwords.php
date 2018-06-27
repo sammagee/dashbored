@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'password' => 'Passwords must be at least six characters and match the confirmation.',
+    'password' => 'Must be 6+ characters.',
     'reset' => 'Your password has been reset! You may now login.',
     'sent' => 'Use the email we just sent you to reset your password.',
     'token' => 'This password reset token is invalid.',

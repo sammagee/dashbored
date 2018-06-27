@@ -1,10 +1,11 @@
 <template>
-  <div
-    class="absolute cursor-pointer flex font-bold h-12 items-center justify-center leading-none pin-r pin-t px-4 text-red text-xs"
-    v-if="form.errors.has(field)"
-    v-tooltip.right="form.errors.get(field)">
-    <span>!</span>
-  </div>
+  <transition name="fade" mode="out-in" appear>
+    <div
+      class="error"
+      v-if="form.errors.has(field)"
+      v-text="form.errors.get(field)">
+    </div>
+  </transition>
 </template>
 
 <script>

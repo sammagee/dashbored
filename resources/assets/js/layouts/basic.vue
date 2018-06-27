@@ -1,8 +1,6 @@
 <template>
-  <div class="flex h-full items-center justify-center p-6">
-    <div class="w-full sm:w-64">
-      <child />
-    </div>
+  <div class="flex items-center justify-center p-6">
+    <child />
   </div>
 </template>
 

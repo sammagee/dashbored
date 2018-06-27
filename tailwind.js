@@ -251,6 +251,7 @@ module.exports = {
   */
 
   textSizes: {
+    '2xs': '.625rem',   // 8px
     'xs': '.75rem',     // 12px
     'sm': '.875rem',    // 14px
     'base': '1rem',     // 16px
@@ -601,6 +602,7 @@ module.exports = {
   */
 
   maxWidth: {
+    '1/2': '50%',
     'xs': '20rem',
     'sm': '30rem',
     'md': '40rem',
@@ -741,7 +743,7 @@ module.exports = {
 
   shadows: {
     default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-    'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
+    'md': '0 4px 8px 0 rgba(0,0,0,0.11), 0 2px 4px 0 rgba(0,0,0,0.08)',
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'none': 'none',
