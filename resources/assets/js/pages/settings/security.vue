@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mx-auto w-full md:w-1/3">
+    <div class="mx-auto w-full md:w-1/3 px-4">
       <form class="rounded shadow-lg" @submit.prevent="update" @keydown="form.onKeydown($event)">
         <div class="bg-white overflow-hidden p-4 rounded">
           <!-- Password -->

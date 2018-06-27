@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full md:w-1/2">
+  <div class="w-full md:w-1/2 px-4">
     <header class="flex items-center justify-center py-4">
       <router-link :to="{ name: 'home' }" class="leading-0">
         <logo class="mr-2 w-8"></logo>
