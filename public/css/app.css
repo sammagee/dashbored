@@ -974,6 +974,9 @@ button:focus {
 .form-input input[type=text],
 .form-input input[type=email],
 .form-input input[type=password] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #f8f8f8;
   border-width: 2px;
   border-color: #f8f8f8;
