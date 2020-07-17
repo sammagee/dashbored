@@ -17,7 +17,7 @@
         "laravel-mix-purgecss": "^1.0.5",
         "laravel-mix-tailwind": "^0.1.0",
         "less": "^2.7.2",
-        "lodash": "^4.17.13",
+        "lodash": "^4.17.19",
         "moment": "^2.22.2",
         "mousetrap": "^1.6.2",
         "popper.js": "^1.14.3",
