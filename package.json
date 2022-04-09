@@ -18,7 +18,7 @@
         "laravel-mix-tailwind": "^0.1.0",
         "less": "^2.7.2",
         "lodash": "^4.17.13",
-        "moment": "^2.22.2",
+        "moment": "^2.29.2",
         "mousetrap": "^1.6.2",
         "popper.js": "^1.14.3",
         "pusher-js": "^4.2.2",
